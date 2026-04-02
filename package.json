@@ -1,0 +1,36 @@
+{
+  "name": "gpt-proxy",
+  "version": "0.1.0",
+  "description": "Proxy for GPT models via Codex OAuth (ChatGPT Pro/Plus) that exposes OpenAI and Anthropic-compatible API endpoints.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "gpt-proxy": "./dist/main.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "bun run --watch ./src/main.ts",
+    "start": "NODE_ENV=production bun run ./src/main.ts",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "citty": "^0.1.6",
+    "clipboardy": "^5.0.0",
+    "consola": "^3.4.2",
+    "fetch-event-stream": "^0.1.5",
+    "hono": "^4.9.9",
+    "srvx": "^0.8.9",
+    "tiny-invariant": "^1.3.3"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.23",
+    "tsdown": "^0.15.6",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
